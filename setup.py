@@ -12,15 +12,15 @@
 """
 __author__ = 'liaozhaoyan'
 
-VERSION = '0.7.5'
+VERSION = '0.1.2'
 
 import sys
-from setuptools import setup, find_packages
+from setuptools import setup
 
 if sys.version_info.major == 2:
-    reqLists = ["pip==20.3.4", "requests", "protobuf"]
+    reqLists = ["pip==20.3.4", "requests", "protobuf==3.15.0", "python-snappy==0.6.1"]
 else:
-    reqLists = ["snappy", "protobuf"]
+    reqLists = ["protobuf==3.15.0", "python-snappy==0.6.1"]
 
 setup(name='prometheus-writer',
       version=VERSION,
@@ -44,16 +44,13 @@ setup(name='prometheus-writer',
       author_email='zhaoyan.liao@linux.alibaba.com',
       url="https://github.com/liaozhaoyan/prometheus-writer",
       license='Apache',
-      packages=["promethues-writer"],
+      packages=["prometheus"],
       include_package_data=True,
       zip_safe=True,
       install_requires=reqLists,
       entry_points={
       }
       )
-
-if __name__ == "__main__":
-    pass
 
 if __name__ == "__main__":
     pass

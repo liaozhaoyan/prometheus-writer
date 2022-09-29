@@ -1,0 +1,1 @@
+recursive-include prometheus prometheus.proto
